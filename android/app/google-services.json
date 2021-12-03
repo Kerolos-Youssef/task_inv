@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "348164265863",
+    "project_id": "task-interview-ky",
+    "storage_bucket": "task-interview-ky.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348164265863:android:90bb66c8d7cb728819e522",
+        "android_client_info": {
+          "package_name": "com.kerolesyoussef.task_interview_ky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348164265863-t2mg7ln3g936elgoms174ooii86llefl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA44wd49ojxd3Pb_nyE6PTvMB9P2QGBGoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348164265863-t2mg7ln3g936elgoms174ooii86llefl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
