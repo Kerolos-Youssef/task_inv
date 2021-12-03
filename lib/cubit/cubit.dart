@@ -1,5 +1,3 @@
-// mapsAPIkey=AIzaSyArErqxew8sU8YVaLvxjw2aYNlzKSiDzS8
-
 import 'dart:collection';
 
 import 'package:bloc/bloc.dart';
