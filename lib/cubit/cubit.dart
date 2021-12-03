@@ -58,6 +58,7 @@ class AppCubit extends Cubit<AppStates> {
       'birthdate': birthdate,
       'latitude': locationData.latitude,
       'longitude': locationData.longitude,
+      'createAt': Timestamp.now(),
     }).then((value) {
       emit(AppSendingDataSuccessfullyState());
     }).catchError((error) {
@@ -78,8 +79,10 @@ class AppCubit extends Cubit<AppStates> {
           'birthdate': doc['birthdate'],
           'latitude': doc['latitude'],
           'longitude': doc['longitude'],
+          'createAt': doc['createAt'],
         });
       });
+      data.sort((a, b) => (a['createAt']).compareTo(b['createAt']));
       emit(AppGettingDataSuccessState());
     }).catchError((error) {
       emit(AppGettingDataErrorState());
