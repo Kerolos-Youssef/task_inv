@@ -60,6 +60,7 @@ class UserInputScreen extends StatelessWidget {
                           },
                           //autoValidateMode: AutovalidateMode.onUserInteraction,
                         ),
+                        spaceBetweenLabelAndInput: width * 0.135,
                       ),
                       SizedBox(
                         height: height * 0.03,
@@ -96,10 +97,11 @@ class UserInputScreen extends StatelessWidget {
                         height: height * 0.03,
                       ),
                       Row(
+                        // crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.only(end: width * 0.03),
+                                EdgeInsetsDirectional.only(end: width * 0.065),
                             child: Text(
                               'Address:',
                               style: TextStyle(
@@ -107,26 +109,28 @@ class UserInputScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              AppCubit.get(context).getCurrentLocation();
-                            },
-                            child: state is! AppGettingLocationLoadingState
-                                ? const Text('Locat me')
-                                : Center(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: CircularProgressIndicator(
-                                        color: Colors.grey[300],
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                AppCubit.get(context).getCurrentLocation();
+                              },
+                              child: state is! AppGettingLocationLoadingState
+                                  ? const Text('Locat me')
+                                  : Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: CircularProgressIndicator(
+                                          color: Colors.grey[300],
+                                        ),
                                       ),
                                     ),
+                              style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius:
+                                        BorderRadius.circular(width * 0.06),
                                   ),
-                            style: ButtonStyle(
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(width * 0.06),
                                 ),
                               ),
                             ),

@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 class RowInputItem extends StatelessWidget {
   final String labelTitle;
   final Widget inputField;
-
+  final double? spaceBetweenLabelAndInput;
   RowInputItem({
     required this.labelTitle,
     required this.inputField,
+    this.spaceBetweenLabelAndInput = 0.03,
   });
 
   @override
@@ -16,7 +17,7 @@ class RowInputItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.only(end: width * 0.03),
+          padding: EdgeInsetsDirectional.only(end: spaceBetweenLabelAndInput!),
           child: Text(
             labelTitle,
             style: TextStyle(

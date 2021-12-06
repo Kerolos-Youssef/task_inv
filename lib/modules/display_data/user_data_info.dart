@@ -44,6 +44,7 @@ class UserDataInfo extends StatelessWidget {
                       bottom: height * 0.03,
                     ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Your Name is: ${AppCubit.get(context).data[(AppCubit.get(context).data.length - 1)]['name']}',

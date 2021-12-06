@@ -1,7 +1,9 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_interview_ky/cubit/cubit.dart';
+import 'package:task_interview_ky/modules/display_data/user_data_info.dart';
 import 'package:task_interview_ky/modules/user_input/user_input_screen.dart';
 
 import 'cubit/states.dart';
@@ -9,7 +11,9 @@ import 'cubit/states.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: const UserInputScreen(),
+            home: const UserDataInfo(),
           );
         },
       ),
