@@ -58,7 +58,7 @@ class UserInputScreen extends StatelessWidget {
                               return null;
                             }
                           },
-                          //autoValidateMode: AutovalidateMode.onUserInteraction,
+                          autoValidateMode: AutovalidateMode.onUserInteraction,
                         ),
                         spaceBetweenLabelAndInput: width * 0.135,
                       ),
